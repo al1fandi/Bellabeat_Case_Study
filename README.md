@@ -85,6 +85,7 @@ glimpse(sleep)
 glimpse(weight)
 class(activity$ActivityDate) # --> mengecek struktur tipe data
 ```
+```
 glimpse(activity)
 Rows: 940
 Columns: 15
@@ -137,6 +138,7 @@ $ IsManualReport <chr> "True", "True", "False", "True", "True", "True", "True", 
 $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1.463098…
 class(activity$ActivityDate)
 [1] "character"
+```
 
 ## Step 3: Process
 
