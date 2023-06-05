@@ -37,12 +37,19 @@ A clear statement of the business task:
 
 ### Deliverable
 A description of all data sources used:
-* Database consists of 18 csv files. 
-* Total number of respondents is 30 people.
-* Collected through third party Amazon Mechanical Turk.
-* Location data is missing.
-* Data not updated annually, last updated 2 years ago.
-* Citation of original author name and DOI on the data is not explained.
+
+### Installing and loading the packages
+```r
+install.packages('tidyverse')
+install.packages('lubridate')
+install.packages('tidyr')
+
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+```
 
 ## Step 3: Process
 
