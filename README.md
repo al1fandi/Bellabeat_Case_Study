@@ -170,3 +170,5 @@ A summary of your analysis:
 ### Deliverable
 Supporting visualizations and key findings:
 
+#### Total Steps vs. Calories
+![](https://myoctocat.com/assets/images/base-octocat.svg)
