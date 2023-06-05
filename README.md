@@ -148,6 +148,33 @@ $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1
 ### Deliverable
 Documentation of any cleaning or manipulation of data:
 
+#### Manipulating and fixing the data
+##### activity
+```r
+activity$ActivityDate = as.POSIXct(activity$ActivityDate, format = "%m/%d/%Y", 
+                                 tz = Sys.timezone())
+activity$date <- format(activity$ActivityDate, format = "%m/%d/%y")
+```
+##### calories
+```r
+calories$ActivityHour = as.POSIXct(calories$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p", 
+                                 tz = Sys.timezone())
+calories$time <- format(calories$ActivityHour, format = "%H:%M:%S")
+calories$date <- format(calories$ActivityHour, format = "%m/%d/%y")
+```
+##### intensities
+```r
+intensities$ActivityHour = as.POSIXct(intensities$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p",
+                                    tz = Sys.timezone())
+intensities$time <- format(intensities$ActivityHour, format = "%H:%M:%S")
+intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
+```
+##### sleep
+```r
+sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
+sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
+```
+
 ## Step 4: Analyze
 
 ### Key tasks
