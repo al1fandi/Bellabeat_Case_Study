@@ -171,4 +171,6 @@ A summary of your analysis:
 Supporting visualizations and key findings:
 
 #### Total Steps vs. Calories
-![](https://myoctocat.com/assets/images/base-octocat.svg)
+![https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
+
+
