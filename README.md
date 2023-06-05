@@ -38,7 +38,7 @@ A clear statement of the business task:
 ### Deliverable
 A description of all data sources used:
 
-### Installing and loading the packages
+#### Installing and loading the packages
 ```r
 install.packages('tidyverse')
 install.packages('lubridate')
@@ -49,6 +49,15 @@ library(lubridate)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
+```
+
+#### Importing dataset
+```r
+activity <- read.csv("dailyActivity_merged.csv")
+calories <- read.csv("hourlyCalories_merged.csv")
+intensities <- read.csv("hourlyIntensities_merged.csv")
+sleep <- read.csv("sleepDay_merged.csv")
+weight <- read.csv("weightLogInfo_merged.csv")
 ```
 
 ## Step 3: Process
