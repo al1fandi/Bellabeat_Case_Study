@@ -50,6 +50,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 ```
+```
 ── Attaching core tidyverse packages ───────────────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.2     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
@@ -64,6 +65,7 @@ library(lubridate)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
+```
 
 #### Importing dataset
 ```r
