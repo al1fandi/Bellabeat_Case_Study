@@ -22,7 +22,6 @@ glimpse(calories)
 glimpse(intensities)
 glimpse(sleep)
 glimpse(weight)
-class(activity$ActivityDate) # --> mengecek struktur tipe data
 
 # Manipulating and fixing the data
 # activity
