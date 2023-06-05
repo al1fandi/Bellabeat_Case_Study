@@ -60,13 +60,14 @@ sleep <- read.csv("sleepDay_merged.csv")
 weight <- read.csv("weightLogInfo_merged.csv")
 ```
 
-#### Importing datasettest
-```
-activity <- read.csv("dailyActivity_merged.csv")
-calories <- read.csv("hourlyCalories_merged.csv")
-intensities <- read.csv("hourlyIntensities_merged.csv")
-sleep <- read.csv("sleepDay_merged.csv")
-weight <- read.csv("weightLogInfo_merged.csv")
+#### Getting to know the data
+```r
+glimpse(activity)
+glimpse(calories)
+glimpse(intensities)
+glimpse(sleep)
+glimpse(weight)
+class(activity$ActivityDate) # --> mengecek struktur tipe data
 ```
 
 ## Step 3: Process
