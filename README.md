@@ -174,6 +174,12 @@ intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
 sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
 sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
 ```
+```r
+glimpse(activity)
+glimpse(calories)
+glimpse(intensities)
+glimpse(sleep)
+```
 
 ## Step 4: Analyze
 
