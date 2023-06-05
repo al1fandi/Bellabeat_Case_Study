@@ -1,1 +1,5 @@
-theme: jekyll-theme-merlot
+title: Bellabeat_Case_Study
+description: 
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-modernist
