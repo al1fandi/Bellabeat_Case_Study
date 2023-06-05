@@ -60,10 +60,10 @@ library(tidyr)
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package to force all conflicts to become errors
-> library(lubridate)
-> library(ggplot2)
-> library(dplyr)
-> library(tidyr)
+library(lubridate)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
 
 #### Importing dataset
 ```r
@@ -83,7 +83,7 @@ glimpse(sleep)
 glimpse(weight)
 class(activity$ActivityDate) # --> mengecek struktur tipe data
 ```
-> glimpse(activity)
+glimpse(activity)
 Rows: 940
 Columns: 15
 $ Id                       <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 150396…
@@ -101,20 +101,20 @@ $ FairlyActiveMinutes      <int> 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21, 
 $ LightlyActiveMinutes     <int> 328, 217, 181, 209, 221, 164, 233, 264, 205, 211, 130,…
 $ SedentaryMinutes         <int> 728, 776, 1218, 726, 773, 539, 1149, 775, 818, 838, 12…
 $ Calories                 <int> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 2035, 1786, …
-> glimpse(calories)
+glimpse(calories)
 Rows: 22,099
 Columns: 3
 $ Id           <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, 150396…
 $ ActivityHour <chr> "4/12/2016 12:00:00 AM", "4/12/2016 1:00:00 AM", "4/12/2016 2:00:0…
 $ Calories     <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66, 110, 151,…
-> glimpse(intensities)
+glimpse(intensities)
 Rows: 22,099
 Columns: 4
 $ Id               <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, 15…
 $ ActivityHour     <chr> "4/12/2016 12:00:00 AM", "4/12/2016 1:00:00 AM", "4/12/2016 2:…
 $ TotalIntensity   <int> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, 58, 13, 16…
 $ AverageIntensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.000000, 0.…
-> glimpse(sleep)
+glimpse(sleep)
 Rows: 413
 Columns: 5
 $ Id                 <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, …
@@ -122,7 +122,7 @@ $ SleepDay           <chr> "4/12/2016 12:00:00 AM", "4/13/2016 12:00:00 AM", "4/
 $ TotalSleepRecords  <int> 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
 $ TotalMinutesAsleep <int> 327, 384, 412, 340, 700, 304, 360, 325, 361, 430, 277, 245, …
 $ TotalTimeInBed     <int> 346, 407, 442, 367, 712, 320, 377, 364, 384, 449, 323, 274, …
-> glimpse(weight)
+glimpse(weight)
 Rows: 67
 Columns: 8
 $ Id             <dbl> 1503960366, 1503960366, 1927972279, 2873212765, 2873212765, 4319…
@@ -133,7 +133,7 @@ $ Fat            <int> 22, NA, NA, NA, NA, 25, NA, NA, NA, NA, NA, NA, NA, NA, N
 $ BMI            <dbl> 22.65, 22.65, 47.54, 21.45, 21.69, 27.45, 27.38, 27.25, 27.46, 2…
 $ IsManualReport <chr> "True", "True", "False", "True", "True", "True", "True", "True",…
 $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1.463098…
-> class(activity$ActivityDate)
+class(activity$ActivityDate)
 [1] "character"
 
 ## Step 3: Process
