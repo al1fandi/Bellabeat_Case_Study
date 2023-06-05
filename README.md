@@ -172,6 +172,7 @@ Supporting visualizations and key findings:
 
 #### Total Steps vs. Calories
 ![https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
+
 There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
 
 
