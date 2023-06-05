@@ -171,23 +171,24 @@ A summary of your analysis:
 Supporting visualizations and key findings:
 
 #### Total Steps vs. Calories
-![https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
+![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
 
 * There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
 
 #### Total Minutes Asleep vs. Total Time in Bed
-![]()
+![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Total%20Minutes%20Asleep%20vs.%20Total%20Time%20in%20Bed.png)
 
 * There is a linear relationship between sleep duration and total time in bed. The more time spent in bed, the longer the sleep duration. However, there is a need to improve the quality of sleep by informing the right time to sleep by providing automatic reminders of bedtime. If necessary, it is equipped with an automatic alarm/reminder if the sleep time is excessive (according to health recommendations) and encourages users to move immediately.
 
 #### Average Total Intensity vs. Time
-![]()
+![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Average%20Total%20Intensity%20vs.%20Time.png)
 
 * The range of user intensity starts to increase from 5 am to 10 pm.
 * The highest intensity occurs from 5 pm to 7 pm. I estimate that the majority of users utilize this time frame to increase their intensity by exercising after work.
 * Maybe an automatic reminder can be given to users to exercise during the time range with the highest intensity, which is 5 - 7 pm.
 
 #### Minutes Asleep vs. Sedentary Minutes
-![]()
+![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Minutes%20Asleep%20vs.%20Sedentary%20Minutes.png)
 
-* a
+* There is a negative correlation between sedentary time and sleep duration
+* Sleep quality needs to be improved by telling users when to sleep to reduce sedentary time. This improvement in sleep quality will make users more productive in doing many activities that are beneficial to their health.
