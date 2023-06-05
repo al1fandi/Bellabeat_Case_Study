@@ -11,6 +11,7 @@
 # Business task
 # Menganalisis data penggunaan perangkat pintar untuk membuka peluang pertumbuhan baru dan insight yang dihasilkan dapat mengembangkan strategi pemasaran bagi perusahaan.
 
+# PREPARE
 # Installing and loading the packages
 install.packages('tidyverse')
 install.packages('lubridate')
@@ -37,6 +38,7 @@ glimpse(sleep)
 glimpse(weight)
 class(activity$ActivityDate) # --> mengecek struktur tipe data
 
+# PROCESS
 # Manipulating and fixing the data
 # activity
 activity$ActivityDate = as.POSIXct(activity$ActivityDate, format = "%m/%d/%Y", 
@@ -56,6 +58,7 @@ intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
 sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
 sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
 
+# ANALYZE
 # Exploring and summarizing the data
 # Distinct "id" value
 n_distinct(activity$Id)
@@ -99,6 +102,7 @@ weight %>%
 merged_data1 <- merge(sleep,activity, by = c("Id", "date"))
 n_distinct(merged_data1)
 
+# SHARE
 # Visualization
 # Activity
 ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
