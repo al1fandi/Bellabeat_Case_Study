@@ -1,4 +1,3 @@
-theme: minima
 # Bellabeat Data Analysis Case Study
 
 ## Project Overview
