@@ -60,6 +60,15 @@ sleep <- read.csv("sleepDay_merged.csv")
 weight <- read.csv("weightLogInfo_merged.csv")
 ```
 
+#### Importing datasettest
+```
+activity <- read.csv("dailyActivity_merged.csv")
+calories <- read.csv("hourlyCalories_merged.csv")
+intensities <- read.csv("hourlyIntensities_merged.csv")
+sleep <- read.csv("sleepDay_merged.csv")
+weight <- read.csv("weightLogInfo_merged.csv")
+```
+
 ## Step 3: Process
 
 ### Key tasks
