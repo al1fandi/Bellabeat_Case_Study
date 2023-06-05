@@ -148,7 +148,25 @@ $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1
 ### Deliverable
 Documentation of any cleaning or manipulation of data:
 
+## Step 4: Analyze
 
+### Key tasks
+1. Aggregate your data so it’s useful and accessible.
+2. Organize and format your data.
+3. Perform calculations.
+4. Identify trends and relationships.
 
+### Deliverable
+A summary of your analysis:
 
+## Step 5: Share
+
+### Key tasks
+1. Determine the best way to share your findings.
+2. Create effective data visualizations.
+3. Present your findings.
+4. Ensure your work is accessible.
+
+### Deliverable
+Supporting visualizations and key findings:
 
