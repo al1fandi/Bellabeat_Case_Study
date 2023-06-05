@@ -176,9 +176,50 @@ sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
 ```
 ```r
 glimpse(activity)
+Rows: 940
+Columns: 16
+$ Id                       <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 150396…
+$ ActivityDate             <dttm> 2016-04-12, 2016-04-13, 2016-04-14, 2016-04-15, 2016-…
+$ TotalSteps               <int> 13162, 10735, 10460, 9762, 12669, 9705, 13019, 15506, …
+$ TotalDistance            <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.88, 6.68, …
+$ TrackerDistance          <dbl> 8.50, 6.97, 6.74, 6.28, 8.16, 6.48, 8.59, 9.88, 6.68, …
+$ LoggedActivitiesDistance <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+$ VeryActiveDistance       <dbl> 1.88, 1.57, 2.44, 2.14, 2.71, 3.19, 3.25, 3.53, 1.96, …
+$ ModeratelyActiveDistance <dbl> 0.55, 0.69, 0.40, 1.26, 0.41, 0.78, 0.64, 1.32, 0.48, …
+$ LightActiveDistance      <dbl> 6.06, 4.71, 3.91, 2.83, 5.04, 2.51, 4.71, 5.03, 4.24, …
+$ SedentaryActiveDistance  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+$ VeryActiveMinutes        <int> 25, 21, 30, 29, 36, 38, 42, 50, 28, 19, 66, 41, 39, 73…
+$ FairlyActiveMinutes      <int> 13, 19, 11, 34, 10, 20, 16, 31, 12, 8, 27, 21, 5, 14, …
+$ LightlyActiveMinutes     <int> 328, 217, 181, 209, 221, 164, 233, 264, 205, 211, 130,…
+$ SedentaryMinutes         <int> 728, 776, 1218, 726, 773, 539, 1149, 775, 818, 838, 12…
+$ Calories                 <int> 1985, 1797, 1776, 1745, 1863, 1728, 1921, 2035, 1786, …
+$ date                     <chr> "04/12/16", "04/13/16", "04/14/16", "04/15/16", "04/16…
 glimpse(calories)
+Rows: 22,099
+Columns: 5
+$ Id           <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, 150396…
+$ ActivityHour <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02:00:00, 20…
+$ Calories     <int> 81, 61, 59, 47, 48, 48, 48, 47, 68, 141, 99, 76, 73, 66, 110, 151,…
+$ time         <chr> "00:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "05:00…
+$ date         <chr> "04/12/16", "04/12/16", "04/12/16", "04/12/16", "04/12/16", "04/12…
 glimpse(intensities)
+Rows: 22,099
+Columns: 6
+$ Id               <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, 15…
+$ ActivityHour     <dttm> 2016-04-12 00:00:00, 2016-04-12 01:00:00, 2016-04-12 02:00:00…
+$ TotalIntensity   <int> 20, 8, 7, 0, 0, 0, 0, 0, 13, 30, 29, 12, 11, 6, 36, 58, 13, 16…
+$ AverageIntensity <dbl> 0.333333, 0.133333, 0.116667, 0.000000, 0.000000, 0.000000, 0.…
+$ time             <chr> "00:00:00", "01:00:00", "02:00:00", "03:00:00", "04:00:00", "0…
+$ date             <chr> "04/12/16", "04/12/16", "04/12/16", "04/12/16", "04/12/16", "0…
 glimpse(sleep)
+Rows: 413
+Columns: 6
+$ Id                 <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 1503960366, …
+$ SleepDay           <dttm> 2016-04-12, 2016-04-13, 2016-04-15, 2016-04-16, 2016-04-17,…
+$ TotalSleepRecords  <int> 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ TotalMinutesAsleep <int> 327, 384, 412, 340, 700, 304, 360, 325, 361, 430, 277, 245, …
+$ TotalTimeInBed     <int> 346, 407, 442, 367, 712, 320, 377, 364, 384, 449, 323, 274, …
+$ date               <chr> "04/12/16", "04/13/16", "04/15/16", "04/16/16", "04/17/16", …
 ```
 
 ## Step 4: Analyze
@@ -192,6 +233,129 @@ glimpse(sleep)
 ### Deliverable
 A summary of your analysis:
 
+#### Exploring and summarizing the data
+##### Distinct "id" value
+```r
+n_distinct(activity$Id)
+[1] 33
+n_distinct(calories$Id)
+[1] 33
+n_distinct(intensities$Id)
+[1] 33
+n_distinct(sleep$Id)
+[1] 24
+n_distinct(weight$Id)
+[1] 8
+```
+
+##### Observations each dataframe
+```r
+nrow(activity)
+[1] 940
+nrow(calories)
+[1] 22099
+nrow(intensities)
+[1] 22099
+nrow(sleep)
+[1] 413
+nrow(weight)
+[1] 67
+```
+
+##### Summary statistic
+Activity
+```r
+activity %>% 
+  select(TotalSteps, TotalDistance, SedentaryMinutes, Calories) %>% 
+  summary()
+TotalSteps    TotalDistance    SedentaryMinutes    Calories   
+ Min.   :    0   Min.   : 0.000   Min.   :   0.0   Min.   :   0  
+ 1st Qu.: 3790   1st Qu.: 2.620   1st Qu.: 729.8   1st Qu.:1828  
+ Median : 7406   Median : 5.245   Median :1057.5   Median :2134  
+ Mean   : 7638   Mean   : 5.490   Mean   : 991.2   Mean   :2304  
+ 3rd Qu.:10727   3rd Qu.: 7.713   3rd Qu.:1229.5   3rd Qu.:2793  
+ Max.   :36019   Max.   :28.030   Max.   :1440.0   Max.   :4900  
+activity %>% 
+  select(VeryActiveMinutes, LightlyActiveMinutes, FairlyActiveMinutes) %>% 
+  summary()
+VeryActiveMinutes LightlyActiveMinutes FairlyActiveMinutes
+ Min.   :  0.00    Min.   :  0.0        Min.   :  0.00     
+ 1st Qu.:  0.00    1st Qu.:127.0        1st Qu.:  0.00     
+ Median :  4.00    Median :199.0        Median :  6.00     
+ Mean   : 21.16    Mean   :192.8        Mean   : 13.56     
+ 3rd Qu.: 32.00    3rd Qu.:264.0        3rd Qu.: 19.00     
+ Max.   :210.00    Max.   :518.0        Max.   :143.00     
+```
+Calories
+```r
+calories %>% 
+  select(Calories) %>% 
+  summary()
+Calories     
+ Min.   : 42.00  
+ 1st Qu.: 63.00  
+ Median : 83.00  
+ Mean   : 97.39  
+ 3rd Qu.:108.00  
+ Max.   :948.00  
+```
+Sleep
+```r
+sleep %>% 
+  select(TotalTimeInBed, TotalMinutesAsleep, TotalSleepRecords) %>% 
+  summary()
+TotalTimeInBed  TotalMinutesAsleep TotalSleepRecords
+ Min.   : 61.0   Min.   : 58.0      Min.   :1.000    
+ 1st Qu.:403.0   1st Qu.:361.0      1st Qu.:1.000    
+ Median :463.0   Median :433.0      Median :1.000    
+ Mean   :458.6   Mean   :419.5      Mean   :1.119    
+ 3rd Qu.:526.0   3rd Qu.:490.0      3rd Qu.:1.000    
+ Max.   :961.0   Max.   :796.0      Max.   :3.000    
+```
+Weight
+```r
+weight %>% 
+  select(BMI, WeightKg) %>% 
+  summary()
+BMI           WeightKg     
+ Min.   :21.45   Min.   : 52.60  
+ 1st Qu.:23.96   1st Qu.: 61.40  
+ Median :24.39   Median : 62.50  
+ Mean   :25.19   Mean   : 72.04  
+ 3rd Qu.:25.56   3rd Qu.: 85.05  
+ Max.   :47.54   Max.   :133.50  
+```
+
+##### Merging between activity and sleep data (for visualization)
+```r
+merged_data1 <- merge(sleep,activity, by = c("Id", "date"))
+n_distinct(merged_data1)
+[1] 410
+glimpse(merged_data1)
+Rows: 413
+Columns: 20
+$ Id                       <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 150396…
+$ date                     <chr> "04/12/16", "04/13/16", "04/15/16", "04/16/16", "04/17…
+$ SleepDay                 <dttm> 2016-04-12, 2016-04-13, 2016-04-15, 2016-04-16, 2016-…
+$ TotalSleepRecords        <int> 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ TotalMinutesAsleep       <int> 327, 384, 412, 340, 700, 304, 360, 325, 361, 430, 277,…
+$ TotalTimeInBed           <int> 346, 407, 442, 367, 712, 320, 377, 364, 384, 449, 323,…
+$ ActivityDate             <dttm> 2016-04-12, 2016-04-13, 2016-04-15, 2016-04-16, 2016-…
+$ TotalSteps               <int> 13162, 10735, 9762, 12669, 9705, 15506, 10544, 9819, 1…
+$ TotalDistance            <dbl> 8.50, 6.97, 6.28, 8.16, 6.48, 9.88, 6.68, 6.34, 9.04, …
+$ TrackerDistance          <dbl> 8.50, 6.97, 6.28, 8.16, 6.48, 9.88, 6.68, 6.34, 9.04, …
+$ LoggedActivitiesDistance <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+$ VeryActiveDistance       <dbl> 1.88, 1.57, 2.14, 2.71, 3.19, 3.53, 1.96, 1.34, 2.81, …
+$ ModeratelyActiveDistance <dbl> 0.55, 0.69, 1.26, 0.41, 0.78, 1.32, 0.48, 0.35, 0.87, …
+$ LightActiveDistance      <dbl> 6.06, 4.71, 2.83, 5.04, 2.51, 5.03, 4.24, 4.65, 5.36, …
+$ SedentaryActiveDistance  <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
+$ VeryActiveMinutes        <int> 25, 21, 29, 36, 38, 50, 28, 19, 41, 39, 73, 31, 48, 16…
+$ FairlyActiveMinutes      <int> 13, 19, 34, 10, 20, 31, 12, 8, 21, 5, 14, 23, 28, 12, …
+$ LightlyActiveMinutes     <int> 328, 217, 209, 221, 164, 264, 205, 211, 262, 238, 216,…
+$ SedentaryMinutes         <int> 728, 776, 726, 773, 539, 775, 818, 838, 732, 709, 814,…
+$ Calories                 <int> 1985, 1797, 1745, 1863, 1728, 2035, 1786, 1775, 1949, …
+```
+
 ## Step 5: Share
 
 ### Key tasks
@@ -203,24 +367,57 @@ A summary of your analysis:
 ### Deliverable
 Supporting visualizations and key findings:
 
-#### Total Steps vs. Calories
+#### Visualization
+#### Total Steps vs. Calories (Activity)
+```r
+ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
+  geom_point() + geom_smooth() + labs(title = "Total Steps vs. Calories") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  ylab("Calories") + xlab("Total Steps")
+```
 ![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
 
 * There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
 
-#### Total Minutes Asleep vs. Total Time in Bed
+#### Total Minutes Asleep vs. Total Time in Bed (Sleep)
+```r
+ggplot(data=sleep, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) +
+  geom_point() + labs(title = "Total Minutes Asleep vs. Total Time in Bed") +
+  theme(plot.title = element_text(hjust = 0.5)) + geom_jitter() +
+  ylab("Total Time In Bed") + xlab("Total Minutes Asleep")
+```
 ![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Total%20Minutes%20Asleep%20vs.%20Total%20Time%20in%20Bed.png)
 
 * There is a linear relationship between sleep duration and total time in bed. The more time spent in bed, the longer the sleep duration. However, there is a need to improve the quality of sleep by informing the right time to sleep by providing automatic reminders of bedtime. If necessary, it is equipped with an automatic alarm/reminder if the sleep time is excessive (according to health recommendations) and encourages users to move immediately.
 
-#### Average Total Intensity vs. Time
+#### Average Total Intensity vs. Time (Intensities)
+```r
+intensities2 <- intensities %>% 
+  group_by(time) %>% 
+  drop_na() %>% 
+  summarise(mean_int= mean(TotalIntensity))
+```
+```r
+ggplot(data=intensities2, aes(x=time, y=mean_int)) +
+  geom_histogram(stat = "identity", fill = "lightblue") + 
+  theme(axis.text.x = element_text(angle = 90)) +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylab("Avg Total Intensity") + xlab("Time") +
+  labs(title = "Average Total Intensity vs. Time")
+```
 ![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Average%20Total%20Intensity%20vs.%20Time.png)
 
 * The range of user intensity starts to increase from 5 am to 10 pm.
 * The highest intensity occurs from 5 pm to 7 pm. I estimate that the majority of users utilize this time frame to increase their intensity by exercising after work.
 * Maybe an automatic reminder can be given to users to exercise during the time range with the highest intensity, which is 5 - 7 pm.
 
-#### Minutes Asleep vs. Sedentary Minutes
+#### Minutes Asleep vs. Sedentary Minutes (Merged data (activity & sleep))
+```r
+ggplot(data=merged_data1, aes(x=TotalMinutesAsleep, y=SedentaryMinutes)) +
+  geom_point(color="darkblue") + geom_smooth() + labs(title = "Minutes Asleep vs. Sedentary Minutes") +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  ylab("Sedentary Minutes") + xlab("Total Minutes Asleep")
+```
 ![](https://github.com/al1fandi/Bellabeat_Case_Study/blob/772f8e75bac58fa286be6cd21b672d1ffb84d6ee/images/Minutes%20Asleep%20vs.%20Sedentary%20Minutes.png)
 
 * There is a negative correlation between sedentary time and sleep duration
