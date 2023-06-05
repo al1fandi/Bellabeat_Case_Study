@@ -173,7 +173,21 @@ Supporting visualizations and key findings:
 #### Total Steps vs. Calories
 ![https://myoctocat.com/assets/images/base-octocat.svg](https://github.com/al1fandi/Bellabeat_Case_Study/blob/44f3182101f989af37b6b1b0c033455b531da8e3/images/Total_Steps%20vs.%20Calories.png)
 
-> There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
+* There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
 
+#### Total Minutes Asleep vs. Total Time in Bed
+![]()
 
+* There is a linear relationship between sleep duration and total time in bed. The more time spent in bed, the longer the sleep duration. However, there is a need to improve the quality of sleep by informing the right time to sleep by providing automatic reminders of bedtime. If necessary, it is equipped with an automatic alarm/reminder if the sleep time is excessive (according to health recommendations) and encourages users to move immediately.
 
+#### Average Total Intensity vs. Time
+![]()
+
+* The range of user intensity starts to increase from 5 am to 10 pm.
+* The highest intensity occurs from 5 pm to 7 pm. I estimate that the majority of users utilize this time frame to increase their intensity by exercising after work.
+* Maybe an automatic reminder can be given to users to exercise during the time range with the highest intensity, which is 5 - 7 pm.
+
+#### Minutes Asleep vs. Sedentary Minutes
+![]()
+
+* a
