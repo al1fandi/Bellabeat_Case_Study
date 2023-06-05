@@ -83,7 +83,6 @@ glimpse(calories)
 glimpse(intensities)
 glimpse(sleep)
 glimpse(weight)
-class(activity$ActivityDate) # --> mengecek struktur tipe data
 ```
 ```
 glimpse(activity)
@@ -136,8 +135,6 @@ $ Fat            <int> 22, NA, NA, NA, NA, 25, NA, NA, NA, NA, NA, NA, NA, NA, N
 $ BMI            <dbl> 22.65, 22.65, 47.54, 21.45, 21.69, 27.45, 27.38, 27.25, 27.46, 2…
 $ IsManualReport <chr> "True", "True", "False", "True", "True", "True", "True", "True",…
 $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1.463098…
-class(activity$ActivityDate)
-[1] "character"
 ```
 
 ## Step 3: Process
