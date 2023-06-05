@@ -192,3 +192,21 @@ Supporting visualizations and key findings:
 
 * There is a negative correlation between sedentary time and sleep duration
 * Sleep quality needs to be improved by telling users when to sleep to reduce sedentary time. This improvement in sleep quality will make users more productive in doing many activities that are beneficial to their health.
+
+## Step 6: Act
+
+### Key tasks
+1. Create your portfolio.
+2. Add your case study.
+3. Practice presenting your case study to a friend or family member.
+
+### Deliverable
+Your top high-level insights based on your analysis:
+
+#### Final conclusion and recommendations for the Bellabeat
+The data used to formulate the conclusions consisted of daily activity, calories, intensity, sleep time, and weight, which includes the user's habits in using Bellabeat smart devices. Despite the limited data available and the number of respondents, the conclusions of the results and recommendations will hopefully provide an overview of smart device usage that is useful for developing marketing strategies for Bellabeat products. There are some key findings and recommendations as follows:
+* The data shows an increase in the intensity of using Bellabeat smart devices between 5 pm - 7 pm. This indicates that most female users increase their intensity to exercise after work. For this reason, Bellabeat's product sales target is recommended for women who work full-time from morning to evening.
+* The average number of 7638 steps has not reached the WHO recommended value. This indicates that users of this smart device have not realized the importance of maintaining their health. Bellabeat needs to create an online campaign for users and non-users about the health benefits of doing activities that result in a minimum of 8,000 steps or more a day. The existence of this campaign will attract new users to use Bellabeat because they (new users) feel educated in maintaining a healthy body.
+* The sedentary minutes value reveals that users are sedentary in their daily lives. Therefore, there is a need for a "challenge" feature in the Bellabeat app that will encourage users to move their bodies. Each user who successfully completes the challenge is given a reward, e.g. discounted membership fee if necessary. This challenge feature will provide a new experience for users and can attract new users to use the Bellabeat app.
+* Based on the user's BMI value, there is a need for additional features in the Bellabeat application. The feature is a recommendation for activities that can lose weight even when the user is busy working (based on the average intensity over a period of time).
+* Improving sleep quality is important to reduce sedentary minutes for users. Therefore, the addition of an automatic reminder feature to let users know when to sleep according to health recommendations would be beneficial for users to improve their sleep quality.
