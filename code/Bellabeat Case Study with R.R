@@ -24,6 +24,7 @@ glimpse(intensities)
 glimpse(sleep)
 glimpse(weight)
 
+# Process Section
 # Manipulating and fixing the data
 # activity
 activity$ActivityDate = as.POSIXct(activity$ActivityDate, format = "%m/%d/%Y", 
@@ -43,6 +44,7 @@ intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
 sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
 sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
 
+# Analyze Section
 # Exploring and summarizing the data
 # Distinct "id" value
 n_distinct(activity$Id)
@@ -86,6 +88,7 @@ weight %>%
 merged_data1 <- merge(sleep,activity, by = c("Id", "date"))
 n_distinct(merged_data1)
 
+# Share Section
 # Visualization
 # Activity
 ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
