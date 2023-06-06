@@ -263,7 +263,7 @@ nrow(weight)
 ```
 
 ##### Summary statistic
-Activity
+##### Activity
 ```r
 activity %>% 
   select(TotalSteps, TotalDistance, SedentaryMinutes, Calories) %>% 
@@ -288,7 +288,7 @@ VeryActiveMinutes LightlyActiveMinutes FairlyActiveMinutes
  3rd Qu.: 32.00    3rd Qu.:264.0        3rd Qu.: 19.00     
  Max.   :210.00    Max.   :518.0        Max.   :143.00     
 ```
-Calories
+##### Calories
 ```r
 calories %>% 
   select(Calories) %>% 
@@ -303,7 +303,7 @@ Calories
  3rd Qu.:108.00  
  Max.   :948.00  
 ```
-Sleep
+##### Sleep
 ```r
 sleep %>% 
   select(TotalTimeInBed, TotalMinutesAsleep, TotalSleepRecords) %>% 
@@ -318,7 +318,7 @@ TotalTimeInBed  TotalMinutesAsleep TotalSleepRecords
  3rd Qu.:526.0   3rd Qu.:490.0      3rd Qu.:1.000    
  Max.   :961.0   Max.   :796.0      Max.   :3.000    
 ```
-Weight
+##### Weight
 ```r
 weight %>% 
   select(BMI, WeightKg) %>% 
