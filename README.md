@@ -149,32 +149,32 @@ $ LogId          <dbl> 1.462234e+12, 1.462320e+12, 1.460510e+12, 1.461283e+12, 1
 Documentation of any cleaning or manipulation of data:
 
 #### Manipulating and fixing the data
-##### activity
+##### Activity
 ```r
 activity$ActivityDate = as.POSIXct(activity$ActivityDate, format = "%m/%d/%Y", 
                                  tz = Sys.timezone())
 activity$date <- format(activity$ActivityDate, format = "%m/%d/%y")
 ```
-##### calories
+##### Calories
 ```r
 calories$ActivityHour = as.POSIXct(calories$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p", 
                                  tz = Sys.timezone())
 calories$time <- format(calories$ActivityHour, format = "%H:%M:%S")
 calories$date <- format(calories$ActivityHour, format = "%m/%d/%y")
 ```
-##### intensities
+##### Intensities
 ```r
 intensities$ActivityHour = as.POSIXct(intensities$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p",
                                     tz = Sys.timezone())
 intensities$time <- format(intensities$ActivityHour, format = "%H:%M:%S")
 intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
 ```
-##### sleep
+##### Sleep
 ```r
 sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
 sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
 ```
-```r
+```
 glimpse(activity)
 Rows: 940
 Columns: 16
@@ -268,6 +268,8 @@ Activity
 activity %>% 
   select(TotalSteps, TotalDistance, SedentaryMinutes, Calories) %>% 
   summary()
+```
+```
 TotalSteps    TotalDistance    SedentaryMinutes    Calories   
  Min.   :    0   Min.   : 0.000   Min.   :   0.0   Min.   :   0  
  1st Qu.: 3790   1st Qu.: 2.620   1st Qu.: 729.8   1st Qu.:1828  
@@ -291,6 +293,8 @@ Calories
 calories %>% 
   select(Calories) %>% 
   summary()
+```
+```
 Calories     
  Min.   : 42.00  
  1st Qu.: 63.00  
@@ -304,6 +308,8 @@ Sleep
 sleep %>% 
   select(TotalTimeInBed, TotalMinutesAsleep, TotalSleepRecords) %>% 
   summary()
+```
+```
 TotalTimeInBed  TotalMinutesAsleep TotalSleepRecords
  Min.   : 61.0   Min.   : 58.0      Min.   :1.000    
  1st Qu.:403.0   1st Qu.:361.0      1st Qu.:1.000    
@@ -317,6 +323,8 @@ Weight
 weight %>% 
   select(BMI, WeightKg) %>% 
   summary()
+```
+```
 BMI           WeightKg     
  Min.   :21.45   Min.   : 52.60  
  1st Qu.:23.96   1st Qu.: 61.40  
@@ -332,6 +340,8 @@ merged_data1 <- merge(sleep,activity, by = c("Id", "date"))
 n_distinct(merged_data1)
 [1] 410
 glimpse(merged_data1)
+```
+```
 Rows: 413
 Columns: 20
 $ Id                       <dbl> 1503960366, 1503960366, 1503960366, 1503960366, 150396…
