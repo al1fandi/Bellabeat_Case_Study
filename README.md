@@ -415,7 +415,7 @@ ggplot(data=intensities2, aes(x=time, y=mean_int)) +
   ylab("Avg Total Intensity") + xlab("Time") +
   labs(title = "Average Total Intensity vs. Time")
 ```
-![](images/Average Total Intensity vs. Time.png)
+![test](images/Average_Total_Intensity_vs._Time.png)
 
 * The range of user intensity starts to increase from 5 am to 10 pm.
 * The highest intensity occurs from 5 pm to 7 pm. I estimate that the majority of users utilize this time frame to increase their intensity by exercising after work.
