@@ -68,6 +68,7 @@ library(tidyr)
 ```
 
 #### Importing dataset
+you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
 ```r
 activity <- read.csv("dailyActivity_merged.csv")
 calories <- read.csv("hourlyCalories_merged.csv")
@@ -75,7 +76,6 @@ intensities <- read.csv("hourlyIntensities_merged.csv")
 sleep <- read.csv("sleepDay_merged.csv")
 weight <- read.csv("weightLogInfo_merged.csv")
 ```
-you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
 
 #### Getting to know the data
 ```r
