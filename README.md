@@ -386,7 +386,7 @@ ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
   theme(plot.title = element_text(hjust = 0.5)) + 
   ylab("Calories") + xlab("Total Steps")
 ```
-![images/TotalSteps vs. Calories.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/dc9ce5088493c45b828103c7d61875be02c3f9b0/images/Total_Steps%20vs.%20Calories.png)
+![images/TotalSteps vs. Calories.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Total_Steps%20vs.%20Calories.png?raw=true)
 
 * There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
 
