@@ -1,4 +1,4 @@
-# Bellabeat Data Analysis Case Study
+# Bellabeat Data Analysis Project
 
 # Project Overview
 * Bellabeat is a small, successful company that has the potential to become a larger company in the global smart device market. 
