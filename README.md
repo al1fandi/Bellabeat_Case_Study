@@ -122,41 +122,11 @@ glimpse(sleep)
 A summary of your analysis:
 
 ### Exploring and summarizing the data
-#### Distinct "id" value
-```r
-n_distinct(activity$Id)
-n_distinct(calories$Id)
-n_distinct(intensities$Id)
-n_distinct(sleep$Id)
-n_distinct(weight$Id)
-```
-
-#### Summary statistic
-```r
-# Activity
-activity %>% 
-  select(TotalSteps, TotalDistance, SedentaryMinutes, Calories) %>% 
-  summary()
-
-activity %>% 
-  select(VeryActiveMinutes, LightlyActiveMinutes, FairlyActiveMinutes) %>% 
-  summary()  
-  
-# Calories
-calories %>% 
-  select(Calories) %>% 
-  summary()
-
-# Sleep
-sleep %>% 
-  select(TotalTimeInBed, TotalMinutesAsleep, TotalSleepRecords) %>% 
-  summary()
-
-# Weight
-weight %>% 
-  select(BMI, WeightKg) %>% 
-  summary()
-```
+## Summary statistic
+1. The average user utilizes his/her **daily activity** with **7638 steps**. This average value is not in line with the WHO recommendation of a minimum of **8,000** steps or more per day.
+2. Based on the average value of **sedentaryminutes**, most users do not move for 991 minutes or 16 hours. There is a need for reminder notifications on smart devices, to make users do more movement or activity so that **sedentaryminutes** can be reduced.
+3. Most users do activities that are categorized as **light** in minutes, compared to activities that are categorized as **moderate** or **high**.
+4. Based on the average **BMI value of 25.56**, which means that users are classified as **obese**. This result is still not in accordance with the **recommended normal BMI** value which is between **18.5 - 22.9**. There is a need for additional features in the device to make users more aware of BMI values and provide attractive solution options to reduce them.
 
 ## Step 5: Share
 
@@ -216,4 +186,4 @@ The data used to formulate the conclusions consisted of daily activity, calories
 * The sedentary minutes value reveals that users are sedentary in their daily lives. Therefore, there is a need for a "challenge" feature in the Bellabeat app that will encourage users to move their bodies. Each user who successfully completes the challenge is given a reward, e.g. discounted membership fee if necessary. This challenge feature will provide a new experience for users and can attract new users to use the Bellabeat app.
 * Based on the user's BMI value, there is a need for additional features in the Bellabeat application. The feature is a recommendation for activities that can lose weight even when the user is busy working (based on the average intensity over a period of time).
 * Improving sleep quality is important to reduce sedentary minutes for users. Therefore, the addition of an automatic reminder feature to let users know when to sleep according to health recommendations would be beneficial for users to improve their sleep quality.
-* You can access the code in this **LINK**
+* You can access the code in this LINK
