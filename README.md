@@ -122,7 +122,7 @@ glimpse(sleep)
 A summary of your analysis:
 
 ### Exploring and summarizing the data
-## Summary statistic
+#### Summary statistic
 1. The average user utilizes his/her **daily activity** with **7638 steps**. This average value is not in line with the WHO recommendation of a minimum of **8,000** steps or more per day.
 2. Based on the average value of **sedentaryminutes**, most users do not move for 991 minutes or 16 hours. There is a need for reminder notifications on smart devices, to make users do more movement or activity so that **sedentaryminutes** can be reduced.
 3. Most users do activities that are categorized as **light** in minutes, compared to activities that are categorized as **moderate** or **high**.
