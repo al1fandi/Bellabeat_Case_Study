@@ -33,7 +33,7 @@ A clear statement of the business task:
 
 ## Deliverable
 A description of all data sources used:
-* Activities carried out at the step 2 **prepare** consist of downloading the r library to be used, importing, and understanding the dataset.
+* Activities carried out at the **step 2 prepare** consist of downloading the r library to be used, importing, and understanding the dataset.
 * The r libraries used are 'tidyverse', 'lubridate', 'ggplot2', 'dplyr', and 'tidyr'.
 * Imported datasets that have previously been downloaded via kaggle, you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
 * The imported dataset consists of several tables, namely 'dailyActivity', 'hourlyCalories', 'hourlyIntensities', 'sleepDay', and 'weightLogInfo'.
@@ -50,38 +50,12 @@ A description of all data sources used:
 ## Deliverable
 Documentation of any cleaning or manipulation of data:
 
-### Manipulating and fixing the data
-#### Activity
-```r
-activity$ActivityDate = as.POSIXct(activity$ActivityDate, format = "%m/%d/%Y", 
-                                 tz = Sys.timezone())
-activity$date <- format(activity$ActivityDate, format = "%m/%d/%y")
-```
-#### Calories
-```r
-calories$ActivityHour = as.POSIXct(calories$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p", 
-                                 tz = Sys.timezone())
-calories$time <- format(calories$ActivityHour, format = "%H:%M:%S")
-calories$date <- format(calories$ActivityHour, format = "%m/%d/%y")
-```
-#### Intensities
-```r
-intensities$ActivityHour = as.POSIXct(intensities$ActivityHour, format = "%m/%d/%Y %I:%M:%S %p",
-                                    tz = Sys.timezone())
-intensities$time <- format(intensities$ActivityHour, format = "%H:%M:%S")
-intensities$date <- format(intensities$ActivityHour, format = "%m/%d/%y")
-```
-#### Sleep
-```r
-sleep$SleepDay = as.POSIXct(sleep$SleepDay, format = "%m/%d/%Y %I:%M:%S %p", tz = Sys.timezone())
-sleep$date <- format(sleep$SleepDay, format = "%m/%d/%y")
-```
-```r
-glimpse(activity)
-glimpse(calories)
-glimpse(intensities)
-glimpse(sleep)
-```
+## Manipulating and fixing the data
+After importing and understanding the dataset, it was found that there were errors in some columns containing date and time data that needed to be resolved.
+* Fixing the error column by changing the format of the right data type
+* After the fix, I checked the dataset again to make sure that the data type format was as desired.
+
+**GAMBAR**
 
 ## Step 4: Analyze
 
