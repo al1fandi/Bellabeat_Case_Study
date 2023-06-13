@@ -33,38 +33,11 @@ A clear statement of the business task:
 
 ## Deliverable
 A description of all data sources used:
-
-### Installing and loading the packages
-```r
-install.packages('tidyverse')
-install.packages('lubridate')
-install.packages('tidyr')
-
-library(tidyverse)
-library(lubridate)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-```
-
-### Importing dataset
-```r
-activity <- read.csv("dailyActivity_merged.csv")
-calories <- read.csv("hourlyCalories_merged.csv")
-intensities <- read.csv("hourlyIntensities_merged.csv")
-sleep <- read.csv("sleepDay_merged.csv")
-weight <- read.csv("weightLogInfo_merged.csv")
-```
-You can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
-
-### Getting to know the data
-```r
-glimpse(activity)
-glimpse(calories)
-glimpse(intensities)
-glimpse(sleep)
-glimpse(weight)
-```
+* Activities carried out at the step 2 **prepare** consist of downloading the r library to be used, importing, and understanding the dataset.
+* The r libraries used are 'tidyverse', 'lubridate', 'ggplot2', 'dplyr', and 'tidyr'.
+* Imported datasets that have previously been downloaded via kaggle, you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
+* The imported dataset consists of several tables, namely 'dailyActivity', 'hourlyCalories', 'hourlyIntensities', 'sleepDay', and 'weightLogInfo'.
+* To understand the dataset, I used the glimpse() function in r 
 
 ## Step 3: Process
 
