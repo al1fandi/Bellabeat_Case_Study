@@ -52,8 +52,9 @@ Documentation of any cleaning or manipulation of data:
 
 ## Manipulating and fixing the data
 After importing and understanding the dataset, it was found that there were errors in some columns containing date and time data that needed to be resolved.
-* Fixing the error column by changing the format of the right data type
+* Fixing the error column by changing the format of the right data type.
 * After the fix, I checked the dataset again to make sure that the data type format was as desired.
+* As in the 'calories' table below, the data type format is appropriate.
 
 **GAMBAR**
 
@@ -69,7 +70,12 @@ After importing and understanding the dataset, it was found that there were erro
 A summary of your analysis:
 
 ### Exploring and summarizing the data
-#### Summary statistic
+## Summary statistic
+Exploration is performed by looking for summary statistics to get a descriptive overview of the dataset.
+
+**GAMBAR**
+
+There are several key findings, namely:
 1. The average user utilizes his/her **daily activity** with **7638 steps**. This average value is not in line with the WHO recommendation of a minimum of **8,000** steps or more per day.
 2. Based on the average value of **sedentaryminutes**, most users do not move for 991 minutes or 16 hours. There is a need for reminder notifications on smart devices, to make users do more movement or activity so that **sedentaryminutes** can be reduced.
 3. Most users do activities that are categorized as **light** in minutes, compared to activities that are categorized as **moderate** or **high**.
@@ -86,7 +92,8 @@ A summary of your analysis:
 ## Deliverable
 Supporting visualizations and key findings:
 
-### Visualization
+## Visualization
+
 #### Total Steps vs. Calories (Activity)
 
 ![images/TotalSteps vs. Calories.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Total_Steps%20vs.%20Calories.png?raw=true)
