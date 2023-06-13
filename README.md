@@ -158,13 +158,6 @@ weight %>%
   summary()
 ```
 
-#### Merging between activity and sleep data (for visualization)
-```r
-merged_data1 <- merge(sleep,activity, by = c("Id", "date"))
-n_distinct(merged_data1)
-glimpse(merged_data1)
-```
-
 ## Step 5: Share
 
 ## Key tasks
@@ -178,48 +171,33 @@ Supporting visualizations and key findings:
 
 ### Visualization
 #### Total Steps vs. Calories (Activity)
-```r
-ggplot(data=activity, aes(x=TotalSteps, y=Calories)) +
-  geom_point() + geom_smooth() + labs(title = "Total Steps vs. Calories") +
-  theme(plot.title = element_text(hjust = 0.5)) + 
-  ylab("Calories") + xlab("Total Steps")
-```
+
 ![images/TotalSteps vs. Calories.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Total_Steps%20vs.%20Calories.png?raw=true)
 
+* There is a positive correlation between total steps and calories. As the total steps increase, the number of calories will increase.
+
 #### Total Minutes Asleep vs. Total Time in Bed (Sleep)
-```r
-ggplot(data=sleep, aes(x=TotalMinutesAsleep, y=TotalTimeInBed)) +
-  geom_point() + labs(title = "Total Minutes Asleep vs. Total Time in Bed") +
-  theme(plot.title = element_text(hjust = 0.5)) + geom_jitter() +
-  ylab("Total Time In Bed") + xlab("Total Minutes Asleep")
-```
+
 ![images/TotalMinutesAsleep vs. TotalTimeinBed.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Total%20Minutes%20Asleep%20vs.%20Total%20Time%20in%20Bed.png?raw=true)
 
+* There is a linear relationship between sleep duration and total time in bed. The more time spent in bed, the longer the sleep duration.
+* However, there is a need to improve the quality of sleep by informing the right time to sleep by providing automatic reminders of bedtime.
+* If necessary, it is equipped with an automatic alarm/reminder if the sleep time is excessive (in accordance with health recommendations by WHO or health experts) and encourages users to move immediately.
+
 #### Average Total Intensity vs. Time (Intensities)
-```r
-intensities2 <- intensities %>% 
-  group_by(time) %>% 
-  drop_na() %>% 
-  summarise(mean_int= mean(TotalIntensity))
-```
-```r
-ggplot(data=intensities2, aes(x=time, y=mean_int)) +
-  geom_histogram(stat = "identity", fill = "lightblue") + 
-  theme(axis.text.x = element_text(angle = 90)) +
-  theme(plot.title = element_text(hjust = 0.5)) +
-  ylab("Avg Total Intensity") + xlab("Time") +
-  labs(title = "Average Total Intensity vs. Time")
-```
+
 ![images/AverageTotalIntensity vs. Time.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Average%20Total%20Intensity%20vs.%20Time.png?raw=true)
 
+* The range of user intensity starts to increase from 5 am to 10 pm.
+* The highest intensity occurs from 5 pm to 7 pm. I estimate that the majority of users utilize this time frame to increase their intensity by exercising after work.
+* Maybe an automatic reminder can be given to users to exercise during the time range with the highest intensity, which is 5 - 7 pm.
+
 #### Minutes Asleep vs. Sedentary Minutes (Merged data (activity & sleep))
-```r
-ggplot(data=merged_data1, aes(x=TotalMinutesAsleep, y=SedentaryMinutes)) +
-  geom_point(color="darkblue") + geom_smooth() + labs(title = "Minutes Asleep vs. Sedentary Minutes") +
-  theme(plot.title = element_text(hjust = 0.5)) + 
-  ylab("Sedentary Minutes") + xlab("Total Minutes Asleep")
-```
+
 ![images/MinutesAsleep vs. SedentaryMinutes.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Minutes%20Asleep%20vs.%20Sedentary%20Minutes.png?raw=true)
+
+* There is a negative correlation between sedentary time and sleep duration
+* Sleep quality needs to be improved by telling users when to sleep to reduce sedentary time. This improvement in sleep quality will make users more productive in doing many activities that are beneficial to their health.
 
 ## Step 6: Act
 
