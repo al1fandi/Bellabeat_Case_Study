@@ -56,7 +56,7 @@ After importing and understanding the dataset, it was found that there were erro
 * After the fix, I checked the dataset again to make sure that the data type format was as desired.
 * As in the 'calories' table below, the data type format is appropriate.
 
-**GAMBAR**
+![output](https://github.com/al1fandi/Bellabeat_Project/blob/main/images/output.png?raw=true)
 
 ## Step 4: Analyze
 
