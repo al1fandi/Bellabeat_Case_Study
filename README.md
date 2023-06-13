@@ -94,6 +94,8 @@ Supporting visualizations and key findings:
 
 ## Visualization
 
+Let's visualize the data to find out whether or not there is a relationship between variables and get insights that are useful for a conclusion and recommendations to stakeholders.
+
 #### Total Steps vs. Calories (Activity)
 
 ![images/TotalSteps vs. Calories.](https://github.com/al1fandi/Bellabeat_Case_Study/blob/main/images/Total_Steps%20vs.%20Calories.png?raw=true)
