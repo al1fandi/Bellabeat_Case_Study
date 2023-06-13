@@ -69,11 +69,9 @@ After importing and understanding the dataset, it was found that there were erro
 ## Deliverable
 A summary of your analysis:
 
-### Exploring and summarizing the data
+## Exploring and summarizing the data
 ## Summary statistic
 Exploration is performed by looking for summary statistics to get a descriptive overview of the dataset.
-
-**GAMBAR**
 
 There are several key findings, namely:
 1. The average user utilizes his/her **daily activity** with **7638 steps**. This average value is not in line with the WHO recommendation of a minimum of **8,000** steps or more per day.
