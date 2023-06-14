@@ -35,7 +35,7 @@ A clear statement of the business task:
 A description of all data sources used:
 * Activities carried out at the **Step 2 Prepare** consist of downloading the r library to be used, importing, and understanding the dataset.
 * The r libraries used are 'tidyverse', 'lubridate', 'ggplot2', 'dplyr', and 'tidyr'.
-* Imported datasets that have previously been downloaded via kaggle, you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
+* Imported datasets that have previously been downloaded via Kaggle, you can see the raw data in this [Link](https://www.kaggle.com/datasets/arashnic/fitbit)
 * The imported dataset consists of several tables, namely 'dailyActivity', 'hourlyCalories', 'hourlyIntensities', 'sleepDay', and 'weightLogInfo'.
 * To understand the dataset, I used the glimpse() function in r 
 
